@@ -2,6 +2,8 @@
 
 import os
 
+# PART 1
+
 
 def parseInput():
 
@@ -28,8 +30,19 @@ def calculate_distance():
     return sum([abs(l[i]-r[i]) for i in range(len(l))])
 
 
+# PART 2
+
+def calculate_similarity():
+
+    arrays = parseInput()
+    l, r = sorted(arrays[0]), sorted(arrays[1])
+
+    return sum([l[i] * r.count(l[i]) for i in range(len(l))])
+
+
 def main():
-    print(calculate_distance())
+    # print(calculate_distance())
+    print(calculate_similarity())
 
 
 if __name__ == "__main__":
