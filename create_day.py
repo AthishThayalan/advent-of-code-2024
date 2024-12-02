@@ -10,6 +10,8 @@ def create_day_folder(day):
         f.write("# Paste puzzle input here\n")
     with open(f"{day_folder}/test_solution.py", "w") as f:
         f.write("# Tests for Day {}\n\n".format(day))
+    with open(f"{day_folder}/mock_input.txt", "w") as f:
+        f.write("# Paste puzzle input here\n")
     print(f"Created {day_folder} structure.")
 
 
